@@ -11,7 +11,7 @@ const PreLoader = () => {
   </h1>
   
   <h2 className={styles.title}>
-    <span>We are <span style={{color: "#1e90ff"}}>TechVio</span></span>
+    <span>I,m<span style={{color: "#1e90ff"}}>Abdullah Islam</span></span>
     <span>Welcome to Our Portfolio</span>
     <span>👌</span>
     
