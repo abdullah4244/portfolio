@@ -1,0 +1,44 @@
+ @import "/styles/variables";
+.Header {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    align-items: center;
+}
+.Logo {
+    font-size: 23px;
+    font-weight: 600;
+    color: $primaryTextColor;
+}
+.navLinks {
+    display: flex;
+    align-items: center;
+
+}
+.link {
+    text-decoration: none;
+    color: $primaryTextColor;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 20px;
+    position: relative;
+    &:hover {
+        color: unset;
+    }
+    &::after{
+        content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $primaryTextColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
