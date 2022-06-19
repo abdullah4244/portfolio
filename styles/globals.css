@@ -29,7 +29,6 @@ body {
   margin: 0;
   font-family: SFUIText, sans-serif !important;
   background: #F3F3F3 !important;
-  padding: 35px;
 }
 
 a {
@@ -37,7 +36,10 @@ a {
   text-decoration: none;
   font-family: SFUIText, sans-serif;
 }
-
+ h1,h2,h3,p {
+   margin: 0px;
+   font-weight: normal;
+ }
 * {
   box-sizing: border-box;
 }

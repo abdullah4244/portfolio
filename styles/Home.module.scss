@@ -1,0 +1,161 @@
+@import "/styles/_variables.scss";
+$color_grey: #BFBFBF;
+$color_green: #ffb8b8;
+$color_dark: #1A1A1A;
+$color_background: #2D3235;
+$default_timer: 987ms;
+.Home {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.textContent {
+  width: 60%;
+  color: $primaryTextColor !important;
+  font-weight: 500;
+font-size: 50px;
+/* or 58px */
+line-height: 1.1;
+
+letter-spacing: -0.03em;
+}
+.description {
+  margin-top: 15px;
+  font-weight: 400;
+font-size: 32px;
+line-height: 1.1;
+/* or 37px */
+font-family: SFUIText-Light;
+letter-spacing: -0.03em;
+
+color: #606060;
+}
+.framed {
+  box-shadow:
+    -50px -50px 0 -40px #ffb8b8e4,
+    50px 50px 0 -40px #ffb8b8e4;
+    width: 35%;
+    height: 400px;
+    position: relative;
+}
+
+
+ // Let's write some real CSS??
+.button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding-right: 40px;
+  margin-top: 20px;
+  
+  &:hover {
+    & .button__borderCircle { 
+      transform: translateX(60px);
+    }
+    
+    & .button__maskCircle {
+      clip-path: circle(25px at 85px);
+    }
+  }
+}
+
+.button__text {
+  z-index: 1;
+  font-size: 14px;
+  margin-right: -18px;
+  color: $primaryTextColor;
+  letter-spacing: 0.05em;
+}
+
+.button__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.button__arrow {
+  left: 35px;
+  height: 3px;
+  width: 50px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  background-color: $color_green;
+  
+  &:after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    top: -5px;
+    right: -7px;
+    position: absolute;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid $color_green;
+  }
+}
+
+.button__borderCircle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid $color_grey;
+  transition: transform $default_timer;
+}
+
+.button__maskCircle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(25px);
+  transition: clip-path $default_timer;
+}
+
+.button__smallCircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translateX(60px);
+  background-color: $color_green;
+}
+
+@media screen and (max-width : 600px) {
+  .Home {
+    width: 100%;
+  }
+  .content  {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .textContent  {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+  }
+  .description {
+    font-size: 20px;
+  }
+  .framed {
+    width: 40%;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+
+  }
+  .button {
+    margin-top: 15px;
+  }
+}

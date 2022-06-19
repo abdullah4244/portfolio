@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./Header.module.scss";
 import Link from 'next/link'
-
+import { useRouter } from 'next/router';
 const navLink = [
     {
         title : "Home",
@@ -21,20 +21,27 @@ const navLink = [
         path : "/contact"
     }
 ]
+
+const HeaderLinks = ({navLink , currentPath}) => (
+    <>
+    {
+          navLink.map((link,key)=>(
+            <Link href={link?.path} key={key}>
+                <a className={`${styles.link} ${currentPath === link?.path ? styles.active : ""}`}>{link?.title}</a>
+            </Link>
+        ))
+    }
+    </>
+)
 const Header = () => {
+    const {asPath} = useRouter();
   return (
     <div className={styles.Header}>
         <div className={styles.Logo}>
             AIC.
         </div>
         <div className={styles.navLinks}>
-           {
-               navLink.map((link,key)=>(
-                   <Link href={link?.path} key={key}>
-                       <a className={`${styles.link}`}>{link?.title}</a>
-                   </Link>
-               ))
-           }
+           <HeaderLinks navLink={navLink} currentPath ={asPath}/>
         </div>
     </div>
   )
