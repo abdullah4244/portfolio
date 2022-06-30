@@ -13,8 +13,8 @@ export default function Home() {
       </Head>
       <div className={styles.content}>
           <div className={styles.textContent}>
-              <h1>Hello, I&apos;m</h1>
-              <h1>Abdullah Islam</h1>
+              <h1 className={styles.smallText}>I&apos;m</h1>
+              <h1 className={styles.glow}>Abdullah Islam</h1>
               <p className={styles.description}>Full Stack Web Developer from Pakistan,Lahore specializing in creating web applications using MERN stack.</p>
           </div>
           <div className={styles.framed} >
