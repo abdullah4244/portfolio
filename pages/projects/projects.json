@@ -1,0 +1,15 @@
+[
+    {
+        "title" : "01/OECD",
+        "description" : "MERN-based web app that facilitates bridges between educational research, innovation and policy development.",
+        "link" : "https://oecdcericct.com/auth/home",
+        "thumbnail" : "/oecdThumbnail.png"
+    }
+    ,
+    {
+        "title" : "02/Unation",
+        "description" : "Enterprise application targeting both web and mobile users. Aportal for management and discovering events in USA. Contributed as React js developer",
+        "link" : "https://www.unation.com/",
+        "thumbnail" : "/Unation.png"
+    }
+]

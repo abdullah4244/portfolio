@@ -5,7 +5,9 @@ const Layout = ({children}) => {
   return (
     <div className={styles.Layout}>
        <Header/>
+       <div className='wrapper'>
        {children}
+       </div>
     </div>
   )
 }

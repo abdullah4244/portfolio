@@ -40,6 +40,9 @@ a {
    margin: 0px;
    font-weight: normal;
  }
+ .wrapper {
+   margin-top: 10%;
+ }
 * {
   box-sizing: border-box;
 }

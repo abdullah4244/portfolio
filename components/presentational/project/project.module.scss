@@ -1,0 +1,46 @@
+.project {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.leftSection {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #181717;
+    margin-bottom: 20px;
+}
+.description {
+    font-family: SFUIText-Light;
+font-size: 20px;
+font-weight: 600;
+line-height: 1.1;
+color: #181717;
+margin-bottom: 20px;
+}
+.anchor {
+    text-decoration: none;
+    color: #181717;
+    border-bottom: 1px solid #181717;
+    padding: 5px;
+    font-weight: 500;
+   font-size: 18px;
+   display: inline-block;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   &:hover {
+       transform: scale(1.2);
+   }
+}
+.rightSection {
+    width: 45%;
+    height: 350px;
+    background-color: #606060;
+    position: relative;
+}
