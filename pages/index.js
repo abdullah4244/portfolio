@@ -5,7 +5,6 @@ import { useRouter } from 'next/router'
 import { useState } from 'react';
 export default function Home() {
   const router = useRouter()
-  const [show,setShow] = useState(false);
   return (
     <div className={styles.Home}>
       <Head>
@@ -16,10 +15,7 @@ export default function Home() {
       <div className={styles.content}>
           <div className={styles.textContent}>
               <h1 className={styles.smallText}>I&apos;m</h1>
-              <button onClick={()=>setShow(true)}>Click here</button>
-              {show &&
-              <h1 className={styles.glow}>Lul kha billai</h1>
-                }
+              <h1 className={styles.glow}>Abdullah Islam</h1>
               <p className={styles.description}>Full Stack Web Developer from Pakistan,Lahore specializing in creating web applications using MERN stack.</p>
           </div>
           <div className={styles.framed} >
